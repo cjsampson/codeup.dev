@@ -1,0 +1,52 @@
+a {
+	color: purple;
+}
+
+.boxes {
+	color: white;
+	border: 1px black solid;
+	width: 172px;
+	height: 72px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+span {
+	font-style: bold;
+}
+
+.boxes p {
+	width: 150px;
+	height: 50px;
+}
+
+.red {
+	background-color: red;
+}
+
+.orange {
+	margin-left: 30px;
+	background-color: orange;
+}
+
+.yellow {
+	margin-left: 60px;
+	background-color: yellow;
+}
+
+.green {
+	margin-left: 90px;
+	background-color: green;
+}
+
+.blue {
+	margin-left: 120px;
+	background-color: blue;
+}
+
+.purple {
+	margin-left: 150px;
+	background-color: #DF8BF0;
+}

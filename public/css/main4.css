@@ -1,0 +1,72 @@
+a {
+	color: purple;
+}
+
+.wrapper {
+	width: 600px;
+	overflow: auto;
+}
+.boxes {
+	color: white;
+	border: 1px black solid;
+	width: 172px;
+	height: 72px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	margin: 25px;
+}
+
+span {
+	font-style: bold;
+}
+
+.boxes {
+	height: 72px;
+	width: 72px;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+.red {
+	background-color: red;
+	float: left;
+}
+
+.orange {
+	background-color: orange;
+	float: left;
+}
+
+.yellow {
+	background-color: yellow;
+	float: left;
+	clear: right;
+}
+
+.green {
+	background-color: green;
+	float:left;
+	clear: left;
+}
+
+.purple {
+	background-color: #DF8BF0;
+	float: left;
+}
+.blue {
+	background-color: blue;
+	float: left;
+}
+
+.boxes::after {
+	content: url('/img/codeup-arrow.png');
+	position: relative;
+	bottom: 79px;
+	left: 45px;
+}
+
+.boxes:nth-child(2) {
+	clear:right;
+}
