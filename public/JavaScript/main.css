@@ -1,15 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Maven+Pro);
-
+html {
+	padding: 0;
+}
 body {
 	font-family: "Maven Pro";
 }
 
+nav {
+	min-height: 100px;
+	background-color: #0dc9f7;
+}
 ul {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
-nav li {
+ul li {
+	text-align: center;
+	align-self: auto;
+	flex-grow: 1;
 	list-style-type: none;
+	font-size: 5vh;
 }
 
 .myButton {
@@ -39,8 +49,8 @@ nav li {
 }
 
 .container2 {
-	min-height: 250px;
-	min-width: 250px;
+	max-height: 250px;
+	max-width: 250px;
 	font-size: 3em;
 	background-color: salmon;
 	color: blue;
@@ -49,8 +59,8 @@ nav li {
 }
 
 .container3 {
-	min-height: 250px;
-	min-width: 250px;
+	max-height: 250px;
+	max-width: 250px;
 	font-size: 3em;
 	background-color: Slategrey;
 	color: black;
