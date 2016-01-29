@@ -1,0 +1,26 @@
+Arrays and Null are objects
+
+
+questions
+________
+
+1. Since you guys do the front end, as far as the business aspect, how do you interact with another backend team and or client?
+
+2. Can you describe your daily workflow, from when you first get a project, to when you kind of a have a project wrapped up.
+
+3. How much has your competence of programming taken off since you left Codeup and what are some ways you better learn/retain knowledge now.
+
+
+Answers
+_______
+
+
+Pattern library/style guide: Team's front-end specification's for a project
+
+Making your own framework/grid system
+
+CSS-Overrides
+
+Have in-depth conversations with your designers
+
+95% of mobile apps are abandoned within a month

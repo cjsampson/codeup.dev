@@ -1,18 +1,17 @@
-<?php
-
-try {
-	$conn = new PDO('mysql:host=localhost;dbname=poll', 'root', 'mypass' );
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-	foreach($conn->query('SELECT * FROM pollquestions') as $row) {
-		print_r($row);
-	}
-	$conn = null;
-} catch (PDOException $e) {
-	print "Error!: " . $e->getMessage() . "<br>";
-	die();
-}
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather API</title>
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="/simpleweather.css">
+</head>
+<body>
 
 
-
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/bootstrap/dist/bootstrap.min.js"></script>
+	<script src="/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+	<script src="/weatherapp.js"></script>
+</body>
+</html>
