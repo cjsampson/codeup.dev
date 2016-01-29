@@ -30,7 +30,10 @@ if (color =='red') {
 // TODO: Using the ternary operator, conditionally log a statement that
 //       says whether the random color matches your favorite color.
 
-var randomVsMyFavorite = (favorite == color) ? console.log("Random color just so happens to be my favorite") : "Not the same";
+var randomVsMyFavorite = (favorite == color) ? "Random color just so happens to be my favorite" : "Not the same";
+
+
+console.log(randomVsMyFavorite);
 
 
 
