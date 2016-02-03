@@ -11,9 +11,17 @@
 	console.log(names.length);
 
 	function displayEachName(arr) {
+		console.log(arr+ + "\n");
+		console.log("The array named " + arr+ + " has " + arr.length + " names.");
 		for(var i = 0; i <= arr.length; i++){
-			console.log(array[i]);
+			console.log("The name in position " + (i + 1) + " is " + arr[i] + ".");
 		}
+	}
+
+	function displayEachNameForeach(arr) {
+		arr.forEach(function(element, index, array){
+			console.log("The name in position " + (index + 1) + " of array " + array + " is " + element + ".");
+		});
 	}
 
 	</script>
