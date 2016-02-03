@@ -16,7 +16,7 @@
 				<li><a href="#">Side Projects</a></li>
 			</ul>
 		</nav>
-		
+
 		<div class="wrapper">
 			
 			<div class="container1">
@@ -30,7 +30,8 @@
 			<div class="container3">
 				<p>Some more other text</p>
 			</div> 
-
+			
+			<button></button>
 		</div> <!-- .wrapper -->
 	</div> <!-- .container-fluid -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

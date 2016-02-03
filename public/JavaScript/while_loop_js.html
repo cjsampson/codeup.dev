@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>do while</title>
+</head>
+<body>
+	<script>
+		// var x = 2;
+		// while (x <= 65536) {
+		// 	console.log(x);
+		// 	x *= 2;
+		// }
+
+		//iterate by 1 from 1 to 100, but only output odd numbers
+
+		// var number = 1;
+
+		// while ( number <= 100) {
+		// 	if ( number % 2 == 1) {
+		// 		console.log(number);
+		// 	}
+		// 	number++;
+		// }
+
+		// //iterate by 1 from 100 to 1, output only even numbers
+		// var number = 100;
+
+		// while (number >= 1) {
+		// 	if (number % 2 == 0) {
+		// 		console.log(number);
+		// 	}
+		// 	number--;
+		// }
+
+		var primes = 0;
+			while ( primes <= 100) {
+				while ( primes % 2 == 1)
+					while ( primes % 3 == 1) {
+						while ( primes % 4 == 1) {
+							while ( primes % 5 == 1) {
+								while ( primes % 6 == 1)
+									primes++;
+									console.log( primes );
+							}
+						}
+					}
+				}
+
+	</script>
+</body>
+</html>

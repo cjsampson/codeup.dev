@@ -3,6 +3,7 @@ html {
 	padding: 0;
 }
 body {
+	height: 100%;
 	font-family: "Maven Pro";
 }
 
@@ -33,9 +34,11 @@ ul li {
 }
 
 .wrapper {
+	height: 100%;
 	display: flex;
-	flex-flow: flex-wrap;
+	/*flex-flow: flex-wrap;*/
 	justify-content: space-between;
+	align-items: space-between;
 }
 
 .container1 {
