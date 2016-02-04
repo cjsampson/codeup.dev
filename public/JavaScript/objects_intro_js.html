@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objects in JavaScript</title>
+</head>
+<body>
+	<script>
+
+	var car = {
+		"make"           :  "Nissan",
+		"model"          : 	"350z",
+		"years"			 : 	[1999, 1985, 1967],
+
+		"honk"           : 	function(){
+			return 'HONK HONK';
+			},
+
+		"getMakeAndModel": function(){
+			return "The car is a " + this.make + " " + this.model;
+		},
+
+		"getFirstYear" 	 : function() {
+			var yearsInOrder = this.years.sort();
+			return yearsInOrder[0];
+		}
+	}
+	// todo:
+	// Create person object with firstName and lastName properties (set to your first and last name).
+	// var person = todo;
+
+	var person = {
+		"firstName": "CJ",
+		"lastName" : "Sampson",
+	}
+
+	// todo:
+	// Add a say hello method to the person object that alerts hello using the firstName and lastName properties.
+	person.sayHello = function(){
+		alert("Hello " + this.firstName + " " + this.lastName);
+	}
+	// Say hello from the person object.
+	// person.sayHello();
+	person.sayHello();
+
+	var dance =  {
+
+		moves           : ["mash potato", "monster mash", "detroit pimp", ],
+		dancer          : ['Michael Jackson', 'Ryan Orsinger', 'James Brown'],
+		tempo	        : "150 bpm",
+
+		performance     : function() {
+			return this.getRandomDancer() + " does the " + this.getRandomMove() + " at " + this.tempo + "!";
+		},
+
+		getRandomDancer : function() {
+			var randomDancerIndex = Math.floor(Math.random() * this.dancer.length);
+			return this.dancer[randomDancerIndex];
+		},
+
+		getRandomMove  : function() {
+			var randomMoveIndex = Math.floor(Math.random() * this.moves.length);
+			return this.moves[randomMoveIndex];
+		},
+
+		setTempo: function() {
+			var new_tempo = prompt("How many beats per minute(bpm)?");
+			document.write(new_tempo);
+
+			if( new_tempo != null) {
+				new_tempo = new_tempo.trim();
+			}
+
+			while ( new_tempo == null || new_tempo == "" || isNaN(new_tempo) ) {
+				new_tempo = prompt("Please enter a valid bpm");
+
+				if (new_tempo != null) {
+					new_tempo = new_tempo.trim();
+				}
+				document.write(new_tempo);
+			}
+
+			this.tempo = new_tempo + " bpm";
+			alert("New tempo set to " + this.tempo);
+		}
+	}
+	document.write(dance.performance() );
+	dance.setTempo();
+	console.log( dance.performance() )
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
