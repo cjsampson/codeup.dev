@@ -80,6 +80,46 @@
 		    console.log("---");
 		});
 		// end loop here
+
+		var arrayOfBookStrings = [];
+
+		books.forEach(function(element, index, array){
+			arrayOfBookStrings.push(element.title + " was written by " + element.author.firstName + " " + element.author.lastName + ".");
+		});
+
+		function logBookPlusAuthor(array) {
+			for (var i = 0; i < array.length; i++) {
+				var object = array[i];
+				console.log(object.title + " was written by " + object.author.firstName + " " + object.author.lastName + ".");
+			}
+		}
+
+		function logBookWithAWhile(array) {
+			var i = 0;
+			while (i < array.length) {
+				var object = array[i];
+				console.log(object.title + " was written by " + object.author.firstName + " " + object.author.lastName + ".");
+				i++;
+			}
+		}
+
+
+
+
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
