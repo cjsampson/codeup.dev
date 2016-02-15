@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Definition List</title>
+	<link rel="stylesheet" href="jqueryDL.css">
+</head>
+<body>
+	
+	<h2>Katahdin Woods and Waters FAQ</h2> <a href="#">Click Me</a>
+	<dl class="defList">
+		<dt><a href="#">Where is Katahdin Woods & Waters Recreation Area?</a></dt>
+		<dd class="invisible">Katahdin Woods & Waters Recreation Area is about 100,000 acres along both sides of the East Branch of the Penobscot River, east of Baxter State Park, from approximately Grand Lake Matagamon in the north to the Stacyville Road in the south. The East Branch bisects the land running northwest to southeast.
+
+		The foundation that owns the land is considering a national park to the west of the East branch and a national recreation area to the east.</dd>
+		
+		<dt><a href="#">How big would the national park and national recreation area be?</a></dt>
+		<dd class="invisible">These new additions to the National Park System would be comprised of up to 150,000 acres divided about equally between the national park and national recreation area.</dd>
+
+		<dt><a href="#">What is the difference between a national park and a national recreation area?</a></dt>
+		<dd class="invisible">The concept calls for a national park and a separate national recreation area, both of which would be managed by the National Park Service. However, the units’ purpose and management would vary considerably.
+
+		Generally speaking, management of the national park would focus on the preservation of natural, historic and cultural resources and on recreational activities such as hiking, camping, paddling, fishing, wildlife watching and scenic drives.
+
+		A national recreation area would allow hunting and snowmobiling in addition to the activities allowed in the national park. Discussions are under way to identify how best to ensure significant and ongoing local input and participation in the management of the national recreation area.</dd>
+
+		<dt><a href="#">What can people do for recreation in these areas?</a></dt>
+		<dd class="invisible">The national park will be available for scenic drives, hiking, camping, fishing, paddling, wildlife watching, bicycling, cross-country skiing, snowshoeing and other human-powered activities. The national recreation area will be available for all the same activities plus hunting, ATV riding and snowmobiling.</dd>
+
+		<dt><a href="#">What will happen to snowmobile trails in the area?</a></dt>
+		<dd class="invisible">
+		The concept would permanently guarantee the most popular existing snowmobile routes in the national park and national recreation area. The exact location of the trails and the legal mechanism for guaranteeing their continued existence are the subject of an ongoing collaborative dialogue with snowmobile clubs, individual snowmobilers and the associations that represent them.
+		</dd>
+
+		<dt><a href="#">Will there be any timber harvesting in the national park or national recreation area?</a></dt>
+		<dd class="invisible">In 2013, the Foundation harvested timber on land east of the East Branch. However, the National Park Service normally does not harvest its lands; the primary purpose of National Park Service–managed lands is to protect the resources and provide for public recreation, including hunting and snowmobiling in the national recreation area. Opportunities to for continued harvesting in the national recreation area for the purpose of improving the wildlife habitat are being explored.</dd>
+
+		<dt><a href="#">Will hunting be allowed?</a></dt>
+		<dd class="invisible">Hunting will be allowed in the national recreation area and administered in accordance with Maine wildlife laws and regulations. We continue to explore ways to improve wildlife habitat, including for white-tailed deer, ruffed grouse and other species as well as important non-game species on the proposed national recreation area lands. Hunting generally is not allowed in national parks.</dd>
+
+		<dt><a href="#">How will a national park and national recreation area help the economy?</a></dt>
+		<dd class="invisible">
+		An economics firm recently released two studies profiling the economic impact of national parks and national recreation areas on their surrounding communities.  The reports show that areas across the country with both national parks and national recreation areas that are of a similar size and that are located a similar distance from major airports (such as Bangor) have higher personal income and greater job creation rates than the U.S. average, and higher income and greater job creation rates than Penobscot and Piscataquis counties over the last 40 years.
+
+		We expect similar growth would occur in the Katahdin region in the communities surrounding the proposed national park and national recreation area.
+
+		Similarly situated regions have seen growth not just in tourism-related industries but also in the service industry, including health care and professional and technical services, and in so-called “footloose” businesses that can be located anywhere but choose to locate in rural areas with opportunities for outdoor recreation.
+
+		Acadia National Park attracts about 2.5 million visitors a year. Baxter State Park attracts about 100,000 visitors a year. If 10 percent of the visitors to Acadia were to add a trip to a new national park and national recreation area, it would more than triple the number of park visitors to the region.</dd>
+
+		<dt><a href="#">How would a national park and national recreation area be established?</a></dt>
+		<dd class="invisible">Establishing a new national park and national recreation area requires an Act of Congress. Successfully passing an Act of Congress will require the support of U.S. Sens. Susan Collins and Angus King and U.S. Reps. Bruce Poliquin and Chellie Pingree. Securing their support will require support from residents in the region and across Maine.</dd>
+
+		<dt><a href="#">Why will people visit?</a></dt>
+		<dd class="invisible">
+		National parks are considered the gold standard for outdoor recreation, and many people will come to an area simply because there is a national park.
+
+		Katahdin Woods & Waters Recreation Area includes spectacular views of Katahdin and undeveloped forests, seven pristine ponds and excellent opportunities to view many iconic wildlife species including moose, bear, lynx, loons, bald eagles and many other bird species that are not common in other parts of the country.
+
+		The lands include uncommon ecological features such as extensive silver maple floodplain forests, five rare plant species and interesting geological features including Haskell Rock and Grand Pitch.
+
+		The lands also include extensive free flowing rivers, including about 25 miles of the East Branch of the Penobscot River, with four spectacular rapids and falls, the lower reaches of Wassataquoik Stream with an excellent trout habitat, which flows out of Baxter State Park, and the lower reaches of the Seboeis River. These rivers have significant potential to support a population of ocean-run Atlantic salmon and are all classified as AA rivers with outstanding natural resources, Maine’s highest classification for rivers.
+
+		Visitors will also be interested in the extensive Native American history of the region as well as the historic and present-day logging heritage of the area.</dd>
+		</dl>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+
+$(function(){
+	$('a').on('click', function(e){
+		e.preventDefault();
+		$('body dd').toggleClass("invisible");
+	});
+})
+
+
+</script>
+</body>
+</html>
