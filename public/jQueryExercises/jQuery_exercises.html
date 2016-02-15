@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/jQueryExercises/jQuerycss.css">
+</head>
+<body>
+
+	<h1>Keep Learning and Writing Code to get Better!</h1>
+	<p id="firstPara">Reasons on why you have to keep practicing</p>
+
+	<ul>
+		<li class="listItems" id="one">There are different ways to do different problems</li>
+		<li class="listItems" id="one">Repetition is key!</li>
+		<li class="listItems">The Technology is always evolving so you have to practice</li>
+	</ul>
+
+	<div class="cssChanging">
+		<p class="firstPara">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque at vel nesciunt omnis necessitatibus, quod dignissimos facilis cupiditate? Tempora numquam distinctio quis vero, odio veniam sequi sunt quo quas consectetur.
+		</p>
+		<p class="secondPara">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique atque expedita asperiores beatae. Repudiandae recusandae, consequuntur ut? Velit deserunt hic nulla ab quo quod sunt, illo, nam consectetur, repudiandae necessitatibus.
+		</p>
+		<p class="thirdPara">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, suscipit debitis tempora beatae iste adipisci inventore quas nesciunt? Magni dicta voluptate sit, ipsa a. Sit dolor tenetur ullam pariatur consequuntur.
+		</p>
+	</div>
+
+	<div class="codeup">
+		<p class="codeup">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae modi velit fugit ullam ratione iure odio suscipit eos rerum, similique maiores voluptatem impedit accusamus tempora laborum soluta aperiam, dolorem quidem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptates blanditiis aperiam, eligendi nihil, aliquam labore et nemo fugit doloremque debitis harum nisi, eum accusantium quaerat optio veritatis laboriosam voluptatibus.
+		</p>
+
+		<p class="php">
+			PHP stands for Hypertext Preprocessor.  It is a server-side scripting language. Unlike front-end languages such as HTML, CSS, and JavaScript(front-end), PHP is executed server-side meaning that the server handles the HTML outputs rather than on the browser.  You can build a plethora of 
+		</p>
+	</div>
+
+	<div class="listDiv">
+		<ul class="ulDiv">
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+		</ul>
+	</div>
+
+	<button class="someButton">I'm A Button!</button>
+
+	<script src="/JavaScript/jquery-2.2.0.js"></script>
+	<script>
+		
+		$(document).ready(function() {
+			// var htmlNode = $('body');
+			// console.log(htmlNode);
+
+			// var $elementLiOne = $('.listItems');
+			// $elementLiOne.css({
+			// 	'background-color': '#0dc9f7',
+			// 	'font-family': 'Open Sans'
+			// });
+
+			// var $liIdOne = $('#one');
+			// $liIdOne.css({
+			// 	'background-color': '#bff073',
+			// 	'border': '1.5px solid grey'
+			// });
+
+			// var $liIdOneTwo = $('#one');
+			// $liIdOne.html('<span>hello</span>');
+
+			// var $listItemsClass = $('.listItems')
+			// $listItemsClass.text("what's up friends?");
+
+			// var $pTag = $('p');
+			// $pTag.css({
+			// 	'border': 
+			// });
+
+			// li element selector
+			// var $lis = $('li');
+			// $lis.css({
+			// 	'font-size' : '20px',
+			// });
+
+			// // h1, p, and, li element selectors
+			// var $pTags = $('p');
+			// var $h1Tags = $('h1');
+			// var $liTags = $('li');
+			// alert($h1Tags);
+
+			// var $onlyButton = $('button');
+			// $onlyButton.css({
+			// 	  'display': 'inline-block',
+			// 	  'margin': '0 10px 0 0',
+			// 	  'padding': '15px 45px',
+			// 	  'font-size': '3em',
+			// 	  'font-family': '"Bitter", Serif',
+			// 	  'line-height': '1.8',
+			// 	  'appearance': 'none',
+			// 	  'box-shadow': 'none',
+			// 	  'border-radius': '0',
+			// });
+
+			// var $buttonHover = $('button:hover');
+			// $buttonHover.on('hover',function(){
+
+			// });
+			// var that = this;
+			// var self = this;
+
+			// $('.listDiv').click(function(){
+			// 	(this).css('background-color' , '#8fd4d9');
+			// });
+			$('h1').on('click', function(){
+				$(this).css('background-color', '#25aaa0');
+			});
+
+			$('p').on('dblclick', function(){
+				$(this).css('font-size', '18px');
+			});
+
+		});
+
+	</script>
+</body>
+</html>

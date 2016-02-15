@@ -1,0 +1,10 @@
+button:focus {
+	outline: none;
+}
+
+button {
+  color: #fff;
+  background-color: #6496c8;
+  text-shadow: -1px 1px #417cb8;
+  border: none;
+}

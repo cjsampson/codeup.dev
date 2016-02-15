@@ -1,0 +1,6 @@
+// once focused (input element) readonly
+
+// $keyup method pushes event
+
+// clear button (if user enters wrong sequence)
+

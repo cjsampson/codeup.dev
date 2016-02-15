@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<link rel="stylesheet" href="slider.css">
+</head>
+<body>
+
+	<div class="nav-side">
+    	Side Content
+    	<a href="#" class="nav-toggle"></a>
+  	</div>
+  
+  	<div class="wrapper">
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, iste officia veritatis! Veritatis unde deserunt doloremque asperiores nihil facere qui quidem perferendis labore quae laboriosam, eveniet, nulla quisquam maxime aperiam!
+  		</p>
+  	</div>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"> </script>
+	<script>
+		$('.nav-side .nav-toggle').on('click', function(e){
+	  		e.preventDefault();
+	  		$(this).parent().toggleClass('nav-open');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="calculator">
+
+		<div class="operationDisplay">
+			<input type="text" id="leftWindow" name="leftWindow" readonly>
+			<input type="text" id="centerWindow" name="centerWindow" readonly>
+			<input type="text" id="rightWindow" name="rightWindow" readonly>
+		</div> <!-- .operationDisplay -->
+
+		<div class="calcButtons">
+			<button class="numberButton button">7</button>
+			<button class="numberButton button">8</button>
+			<button class="numberButton button">9</button>
+			<button class="operator button">+</button>
+			<button class="numberButton button">4</button>
+			<button class="numberButton button">5</button>
+			<button class="numberButton button">6</button>
+			<button class="operator button">-</button>
+			<button class="numberButton button">1</button>
+			<button class="numberButton button">2</button>
+			<button class="numberButton button">3</button>
+			<button class="operator button">x</button>
+			<button class="calcButton button" id='C'>C</button>
+			<button class="numberButton button">0</button>
+			<button class="calcButton button" data-button='='>=</button>
+			<button class="operator button">/</button>
+		</div> <!-- .calcButtons -->
+
+	</div> <!-- .calculator -->
+<script src="app.js"></script>
+</body>
+</html>

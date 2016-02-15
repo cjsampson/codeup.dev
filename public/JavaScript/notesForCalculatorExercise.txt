@@ -1,0 +1,11 @@
+we need the ability to click buttons
+-- need event listeners registered on all the buttons
+-- have event listeners fire a function
+
+function fired from a button click should...
+--if number, then add to right or left display
+--if middle and right displays are empty, add number to left
+--if middle or lefet display are not-empty, add numbers to right
+--if operator button, then add to center display
+
+calculate the result

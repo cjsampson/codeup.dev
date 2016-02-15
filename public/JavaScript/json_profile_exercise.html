@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON Git Loop</title>
+	<script src="random_git_data.js"></script>
+</head>
+<body>
+	<script>
+
+		var report = {};
+		// Produce a new object called var report and console.log it's contents
+		// Report should display
+		//  - total number of profiles
+		report.numOfProfiles = arrayOfProfiles.length;
+		
+		//  - number of active profiles
+		report.activeProfiles = 0;
+
+		arrayOfProfiles.forEach(function(element, index, array){
+			if(element.isActive == true) {
+		    	report.activeProfiles += 1;
+			}
+		});
+			
+		//  - sum of the balance of all profiles
+		report.sumOfAllBalances = 0;
+
+		var getSumOfBalances = function(array) {
+			var count = 0;
+			for (var i = 0; i < array.length; i++) {
+				var object = array[i];
+				var balance;
+				balance = object.balance.replace('$','');
+				balance = balance.replace(',','');
+				count += parseFloat(balance);
+			}
+			return report.sumOfAllBalances = Math.ceil(count);
+		}
+		//  - average balance per users
+
+		report.averageBalanceOfUsers = 0;
+
+		var getAverageBalance = function(array) {
+			var count = 0;
+			var numberOfUsers = array.length;
+
+			for(var i = 0; i < array.length; i++) {
+				var object = array[i];
+				var balance;
+				balance = object.balance.replace('$', '');
+				balance = balance.replace(',', '');
+				count += parseFloat(balance);
+			}
+			return report.averageBalanceOfUsers = (count / numberOfUsers).toFixed(2);
+		}
+
+
+		//  - average age of all users
+
+		report.averageAgeOfUsers = 0;
+
+		var getAverageAge = function(array) {
+			var numberOfUsers = array.length;
+			var sumOfAllAges = 0;
+			
+			for(var i = 0; i < array.length; i++) {
+				var object = array[i];
+				sumOfAllAges += parseInt(object.age);
+			}
+			return report.averageAgeOfUsers = Math.ceil(sumOfAllAges / numberOfUsers);
+		}
+
+		//  - Gender count of users
+
+		report.numberOfMales;
+		report.numberOfFemales;
+
+		var genderCount = function(array) {
+			report.numberOfMales = 0;
+			report.numberOfFemales = 0;
+
+			for(var i = 0; i < array.length; i++) {
+				var object = array[i];
+				if (object.gender == "male") {
+					maleCount += 1;
+				} else {
+					femaleCount += 1;
+				}
+			}
+		}
+
+		//  - List of all companies represented by the users
+
+		report.listOfCompanies = [];
+
+		var getListOfCompanies = function(array) {
+			for (var i = 0; i < array.length; i++) {
+				var object = array[i];
+				report.listOfCompanies.push(object.company); 
+			}
+		}
+
+		//  - Name the most commonly occuring eye-color.
+
+		report.mostCommonEyeColor;
+
+		var getEyeColor = function(array) {
+			var greenEyeCount;
+			var blueEyeCount;
+			var brownEyeCount;
+
+			for(var i = 0; i < array.length; i++) {
+				var object = array[i];
+				if (object.eyeColor == "brown") { brownEyeCount += 1 ; } 
+				if (object.eyeColor == "blue") { blueEyeCount += 1   ; }
+				if (object.eyeColor == "green") { greenEyeCount += 1 ; }
+			}
+			if ((greenEyeCount > blueEyeCount) && (greenEyeCount > brownEyeCount)) {
+				report.mostCommonEyeColor = "Green Eyes";
+			}
+			if ((blueEyeCount > greenEyeCount) && (blueEyeCount > brownEyeCount)) {
+				report.mostCommonEyeColor = "Blue Eyes";
+			}
+			if ((brownEyeCount > greenEyeCount) && (brownEyeCount > blueEyeCount)) {
+				report.mostCommonEyeColor = "Brown Eyes";
+			}
+
+		}
+		//  - What's the balance of all non-active accounts vs. the balance of all active accounts?
+		report.nonActivesTotalBalanceSum = 0;
+
+		var getNonActivesBalanceSum = function(array) {
+			var count = 0;
+			for(var i = 0; i < array.length; i++){
+				var object = array[i];
+
+				if(object.isActive == 'false'){
+					var balance;
+					balance = object.balance.replace('$', '');
+					balance = object.balance.replace(',', '');
+					count += parseFloat(balance);
+					report.nonActivesTotalBalanceSum = count;
+				}
+			}
+		}
+
+		report.activesTotalBalanceSum = 0;
+
+		var getActivesBalanceSum = function(array) {
+			var count = 0;
+			for(var i = 0; i < array.length; i++){
+				var object = array[i];
+
+				if(object.isActive == 'true'){
+					var balance;
+					balance = object.balance.replace('$', '');
+					balance = object.balance.replace(',', '');
+					count += parseFloat(balance);
+				}
+			}
+			report.activesTotalBalanceSum = count;
+		}
+
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

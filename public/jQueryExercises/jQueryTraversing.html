@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Traversing</title>
+	<link rel="stylesheet" href="jqueryDL.css">
+</head>
+<body>
+	<h1>Washington State, California, and Florida <em>BEST</em> Amusement Parks</h1>
+		
+		<h3 class="bestHeading">Washington State Fair</h3>
+			<ul class="funFactsList">
+				<li>The 1917 Merry-Go-Round is the oldest active carnival ride at the Fair, operating here since 1923.</li>
+				<li>84,847 riders were not ashamed to "scream like a kid" on the Classic Coaster at the 2015 Washington State Fair.</li>
+				<li>The Skyride debuted at the Fair in 1980, carrying riders 55 feet in the air.</li>
+				<li>28,352 people braved the Rainier Rush roller coaster at the 2015 Washington State Fair.</li>
+			</ul>
+
+		<h3 class="bestHeading">Six Flags Magic Mountain</h3>
+			<ul class="funFactsList">
+				<li>In the 1971 season, Magic Mountain obtained permission from Warner Bros. to use the Looney Tunes characters.</li>
+				<li>With the opening of Great American Revolution in 1976, Magic Mountain became the first park in the world to have a modern, 360-degree steel looping coaster (though previous roller coasters with loops had been built and dismantled elsewhere due to safety issues).</li>
+				<li>In 1979 the park was sold to Six Flags and became known as Six Flags Magic Mountain in 1980.</li>
+				<li>In 1988 Ninja, "The Black Belt of Roller Coasters", opened. Built by Arrow Dynamics, it was the first suspended swing roller coaster on the West coast. </li>
+			</ul>
+
+		<h3 class="bestHeading">Magic Kingdom</h3>
+			<ul class="funFactsList">
+				<li>The Winnie the Pooh attraction in Fantasyland is housed in the site where Mr. Toad’s Wild Ride existed until 1998.</li>
+				<li>The now extinct Mickey’s Toontown Fair was originally known as Birthdayland and then Mickey’s Starland.</li>
+				<li>Splash Mountain in Adventureland has a five-story plunge at a 45-degree angle at a speed of 40 miles per hour.</li>
+				<li>The names of the 3 talking heads who introduce the Country Bear Jamboree are Buff, max, and Melvin.</li>
+			</ul>
+
+
+		
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	
+	$('ul').each(function(){
+		$(this).children().first().css('font-weight', 'bold');
+	});
+
+	// $('li').each(function(){
+		
+	// });
+	$('li').on('click', function(){
+		$(this).parent().addClass('invisible');
+	});
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery playaround</title>
+	<link rel="stylesheet" href="konami.css">
+</head>
+<body>
+
+	<div id="enterText"></div>
+	
+	<p>Please type something into this form: </p>
+
+	<form action="">
+		<input type="password" id="textField" name="textField" placeholder="Type here">
+		<input type="button" value="konamiButton" id="checkButton">
+	</form>
+
+	<div class="youWin">You Win!</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+
+
+
+	$('.youWin').hide();
+
+	var correctSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 40];
+
+	var userEnteredArray = [];
+	
+	$('#textField').keydown(function(e){
+		if(e.keyCode == 8) {
+			userEnteredArray.pop();
+			console.log(userEnteredArray);
+		} else if (e.keyCode != 8 || e.keyCode != 46) {
+			userEnteredArray.push(e.keyCode);
+			console.log(userEnteredArray);
+		}
+	});
+
+	$('#checkButton').on('click', function(e){});
+	
+
+	
+    
+
+
+
+</script>
+</body>
+</html>
