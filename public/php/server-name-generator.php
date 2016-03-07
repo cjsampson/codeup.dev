@@ -1,5 +1,8 @@
 <?php
 
+function randomElement($arr) {
+	return mt_rand(0, (count($arr) - 1));
+}
 
 function randomAdjective(){
 	$adj = ['green', 'metallic', 'soft', 'hard', 'tall', 'ambitious', 'sincere', 'alluring', 'confident', 'knowledgable'];
@@ -15,10 +18,15 @@ function randomNumber(){
 	return mt_rand(1,99);
 }
 
-function randomElement($arr) {
-	return mt_rand(0, (count($arr) - 1));
+function pageController(){
+	$data = [];
+	$getRandomAdj = randomAdjective();
+	$getRandomNoun = randomNoun();
+	$getRandomNumber = randomNumber();
+	return $getRandomAdj . $getRandomNoun . $getRandomNumber;
 }
 
+extract(PageController());
 ?>
 
 <!DOCTYPE html>
