@@ -18,12 +18,16 @@ function randomNumber(){
 	return mt_rand(1,99);
 }
 
+function getServerName(){
+	return randomAdjective() . randomNoun() . randomNumber();
+}
+
 function pageController(){
 	$data = [];
-	$getRandomAdj = randomAdjective();
-	$getRandomNoun = randomNoun();
-	$getRandomNumber = randomNumber();
-	return $getRandomAdj . $getRandomNoun . $getRandomNumber;
+	$data['adjective'] = randomAdjective();
+	$data['name'] = getServerName();
+	$data['number'] = randomNumber();
+	return $data;
 }
 
 extract(PageController());
@@ -42,7 +46,7 @@ extract(PageController());
 	<h4>Congratulations on your new server name!</h4>
 
 	<p><span>You're new server name is: </span>
-	<span id="adjective"><?=randomAdjective()?></span><span id="noun"><?=randomNoun()?></span><span id="number"><?=randomNumber()?></span>
+	<span id="adjective"><?=$data['adjective'];?></span><span id="noun"><?=$data['name'];?></span><span id="number"><?=$data['number'];?></span>
 	</p>
 	<ul>
 		<li>On more instruction on how to set up your server name please click the following links: </li>
