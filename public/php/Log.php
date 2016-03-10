@@ -4,6 +4,11 @@ class Log {
 	public $handle;
 	public $filename;
 
+	public function __construct($prefix = "log") 
+	{
+		$this->filename = 'log-YYYY-MM-DD.log';
+		$this->handle = fopen($this->filename, 'a');
+	}
 	public function logMessage($level, $message) 
 	{
 		$handle = fopen('log-YYYY-MM-DD.log', 'a');
