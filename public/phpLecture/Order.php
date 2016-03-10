@@ -35,6 +35,6 @@ class Order {
 
 	public function sendDelivery() 
 	{
-		
+		echo "Hey Bob, deliver " . $this->orderNumber . " to " $this->deliveryAddress;
 	}
 }
