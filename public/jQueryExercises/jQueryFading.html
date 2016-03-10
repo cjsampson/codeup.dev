@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Fading</title>
+	<link rel="stylesheet" href="jqueryDL.css">
+</head>
+<body>
+	
+	<h3>The Internet</h3>
+
+	<dl>
+		<dt>Web Browsers</dt>
+
+		<dd class="invisible">Google Chrome</dd>
+		<dd class="invisible">Mozilla Firefox</dd>
+		<dd class="invisible">Safari</dd>
+		<dd class="invisible">IE</dd>
+
+		<dt>Data Transfer</dt>
+
+		<dd class="invisible">HTTP</dd>
+		<dd class="invisible">FTP</dd>
+		<dd class="invisible">SMTP</dd>
+		<dd class="invisible">HTTPs</dd>
+	</dl>
+
+	<h3>Cloud Hosting Platforms</h3>
+		<ul>
+			<li>Heroku</li>
+			<li>Rackspace</li>
+			<li>Microsoft Azure</li>
+			<li>Google Cloud Platform</li>
+			<li>Amazon Web Services</li>
+		</ul>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+
+$(function(){
+	$('h3').on('click', function() {
+		$('dd').fadeToggle(300);
+	});
+});
+
+
+</script>
+</body>
+</html>

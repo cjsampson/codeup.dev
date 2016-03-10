@@ -1,0 +1,62 @@
+html, body {
+	height: 100%;
+	background-color: black;
+}
+
+body {
+	display: flex;
+}
+
+/* Page Container for Styling */
+.pageContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+/* Header and Nav */
+.header {
+	height: 12%;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	background-color: #a7dbdb;
+
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+
+}
+li {
+	font-size: 2em;
+	margin-left: 15px;
+	list-style-type: none;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/* Section that will hold the Content */
+.gameSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 88%;
+	width: 100%;
+	background-color: #E0E4CC;
+}
+
+/* NoteCard Div With Words */
+.notecard {
+	min-width: 375px;
+	min-height: 250px;
+	background-image: url('http://3.bp.blogspot.com/-McGfgF94xD0/Ulu7GAWUubI/AAAAAAAAA4I/390hMXPBJ7g/s1600/extramaster-a4Paper@300ppi+(2).png');
+	background-repeat: no-repeat;
+	border-radius: 4px;
+}

@@ -1,16 +1,11 @@
 <?php
-
-class Li {
-	public $tagName = 'li';
-	public $htmlAttributes = [];
-	public $listItems = '';
-
-	public function addItem($item) 
-	{
-		array_push($this->listItems, $item);
-	}
-	public function asHtml() 
-	{
-		return "<{$this->tagName}>{$this->content}</{$this->tagName}";
-	}
+class Li
+{
+    public $tag = 'li';
+    public $htmlAttributes = [];
+    public $content = '';
+    public function asHtml()
+    {
+        return "<{$this->tag}>{$this->content}</{$this->tag}>";
+    }
 }

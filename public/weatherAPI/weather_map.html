@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather API</title>
+	
+</head>
+<body>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+	"use strict"
+
+	$.ajax({
+		url		: "http://api.openweathermap.org/data/2.5/weather",
+		type	: "GET",
+		data    : {
+
+			APPID : "d26fd881b61e4a540838fee51a294919",
+			q  	  : "Orlando, FL"
+		}
+		}).done(function(response) {
+			console.table(response);
+		});
+</script>
+</body>
+</html>

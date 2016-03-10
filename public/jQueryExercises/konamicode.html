@@ -30,6 +30,8 @@
 	var userEnteredArray = [];
 	
 	$('#textField').keydown(function(e){
+		
+
 		if(e.keyCode == 8) {
 			userEnteredArray.pop();
 			console.log(userEnteredArray);
@@ -37,14 +39,24 @@
 			userEnteredArray.push(e.keyCode);
 			console.log(userEnteredArray);
 		}
+
+		if(checkKonamiSequence(correctSequence, userEnteredArray)) {
+			$('body').html("<h1>YOU WIN</h1>");
+		}
 	});
 
-	$('#checkButton').on('click', function(e){});
-	
+	function checkKonamiSequence(arr1, arr2) {
+		if(arr1.length !== arr2.length) {
+			return false;
+		}
 
-	
-    
+		for(var i = arr2.length; i-- ;) {
+			if( arr1[i] !==  arr2[i] ) 
+				return false;
+		}
 
+		return true;
+	}	
 
 
 </script>

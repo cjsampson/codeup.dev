@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+body, html {
+	height: 100%;
+	font-family: 'Bree Serif', serif;
+	-webkit-font-smoothing: antialiased;
+	display: flex;
+}
+
+body {
+	display: flex;
+}
+
+.serverName {
+	width: 400px;
+	height: 350px;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f2f2;
+}
+
+h4 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+li {
+	list-style-type: none;
+	text-decoration: none;
+}
+
+li:hover {
+
+}
+
+
+
+#adjective {
+	color: #2191ba;
+}
+
+#noun {
+	color: #25aaa0;
+}
+
+#number {
+	color: #d93240;
+}

@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Exo);
+
+body {
+	font-family: 'Exo', sans-serif;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h1 {
+	
+}
+
+
+.products {
+	flex-basis: 80%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+#insertProducts {
+	
+}
+
+#refresh {
+	width: 5%;
+	position: absolute;
+}

@@ -1,0 +1,7 @@
+{	
+    "require": {
+        "fennb/phirehose": "^1.0",
+        "igorw/event-source": "^1.0",
+        "php-amqplib/php-amqplib": "^2.6"
+    }
+}
