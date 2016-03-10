@@ -1,7 +1,7 @@
 <?php
 
 class Log {
-
+	public $handle;
 	public $filename;
 
 	public function logMessage($level, $message) 
