@@ -2,6 +2,12 @@
 
 require 'Log.php';
 
-$logSomething = new Log();
 
-$logSomething->info();
+// Procedural/functional example
+// $logSomething = new Log();
+
+// $logSomething->info();
+
+$newLog = new Log('cli');
+$newLog->error();
+$newLog->info();

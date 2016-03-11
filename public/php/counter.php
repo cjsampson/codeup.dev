@@ -12,7 +12,7 @@ var_dump($inputs);
 echo "The \$_GET SUPERGLOBAL is ";
 var_dump($_GET);
 
-echo "The \$_SERVER['QUERY_STRING'] is " . $_SERVER]'QUERY_STRING'];
+echo "The \$_SERVER['QUERY_STRING'] is " . $_SERVER .'QUERY_STRING'];
 
 function pageController() {
 	$data = [];
