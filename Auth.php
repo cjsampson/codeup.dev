@@ -13,7 +13,7 @@ class Auth {
 	 		$logger->info('Success');
 	 		return true;
 	 	}
-	 	$logger->error('Failure');
+	 	// $logger->error('Failure');
 	 	return false;
 	 }
 
@@ -26,9 +26,10 @@ class Auth {
 	 }
 
 	 public static function logout() {
-	 	session_start();
-	 	$_SESSION = [];
-	 	session_destroy();
+	    session_unset();
+	    // delete session data on the server and send the client a new cookie
+	    session_regenerate_id(true);
+	   	header('Location: login.php');
 	 }
 }
 
