@@ -1,8 +1,9 @@
 <?php
 
+require_once '../../Auth.php';
+require_once '../../Input.php';
+
 session_start();
-
-
 if(!isset($_SESSION['logged_in_user'])){
 	header('Location: login.php');
 	die();
