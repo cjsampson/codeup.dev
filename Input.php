@@ -22,10 +22,14 @@ class Input
      */
     public static function get($key, $default = null) {
         // TODO: Fill in this function
-        if(inputHas($key)) {
+        if(self::has($key)) {
             return $_REQUEST[$key];
         }
         return null;
+    }
+
+    public static function escape($key) {
+        return htmlspecialchars(strip_tags($key));
     }
 
     ///////////////////////////////////////////////////////////////////////////
