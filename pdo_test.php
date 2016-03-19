@@ -5,7 +5,7 @@ require 'db_connect.php';
 echo $dbc->getAttribute(PDO::ATTR_CONNECTION_STATUS);
 
 $sql = <<<QUERY
-	DROP TABLE IF exists teams
+	DROP TABLE IF exists teams;
 	CREATE TABLE teams(
 		team_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 		name VARCHAR(100) NOT NULL,
