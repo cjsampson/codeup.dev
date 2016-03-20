@@ -2,19 +2,14 @@
 
 require '../config.php';
 require '../db_connect.php';
+require '../Input.php';
+
+$stmt = $dbc->query('SELECT * FROM national_parks');
 
 
-var_dump($_GET);
-
-$stmt = $dbc->query('SELECT * FROM national_parks LIMIT 4');
-
-// All ten parks
-// while ($row = $stmt->fetch()) {
-// 	print_r($row);
-// }
-
+// All of the national parks in both indexed and associative array
 echo '<pre>';
-print_r ($stmt->fetchAll());
+print_r($stmt->fetchAll(PDO::FETCH_BOTH));
 echo '</pre>';
 
 
