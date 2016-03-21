@@ -1,0 +1,12 @@
+.nationalPark {
+	height: 400px;
+}
+
+.nationalPark > img {
+	max-width: 50%;
+	height: auto;
+}
+
+.description {
+	padding-top: 10px;
+}
