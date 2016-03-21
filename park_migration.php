@@ -17,6 +17,7 @@ $createTable = "CREATE TABLE $tableName (
 	location VARCHAR(200) NOT NULL,
 	date_established DATE NOT NULL,
 	area_in_acres DOUBLE NOT NULL,
+	description TEXT,
 	images VARCHAR(200),
 	PRIMARY KEY (id)
 )";
