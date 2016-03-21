@@ -28,7 +28,7 @@ foreach( $nationalParks as $nationalPark) {
 	$stmt->bindValue(':name', $nationalPark['name'], PDO::PARAM_STR);
 	$stmt->bindValue(':location', $nationalPark['location'], PDO::PARAM_STR);
 	$stmt->bindValue(':date_established', $nationalPark['date_established'], PDO::PARAM_STR);
-	$stmt->bindValue(':area_in_acres', $nationalPark['area_in_acres'], PDO::PARAM_INT);
+	$stmt->bindValue(':area_in_acres', $nationalPark['area_in_acres'], PDO::PARAM_STR);
 	$stmt->bindValue(':images', $nationalPark['images'], PDO::PARAM_STR);
 
 	// execute query after each statment
