@@ -20,13 +20,17 @@ $nationalParks = [
 	  ['name' => 'Shimokita Hanto Quasi-National Park',   'location' => 'Honshu, Japan', 	'date_established'=> '1968-06-22', 'area_in_acres' => 46277.8958, 'images' => '/images/shimokita.jpg']
 ];
 
+	$stmt = $dbc->prepare("INSERT INTO national_parks (name, location, date_established, area_in_acres, images) 
+	VALUES (:name, :location, :date_established, :area_in_acres, :images)");
+
 foreach( $nationalParks as $nationalPark) {
 
-	$sql = "INSERT INTO national_parks (name, location, date_established, area_in_acres, images) 
-	VALUES ('{$nationalPark['name']}', '{$nationalPark['location']}', '{$nationalPark['date_established']}', '{$nationalPark['area_in_acres']}', '{$nationalPark['images']}')";
-	
-	// execute query after each statment
-	$dbc->exec($sql);
-}
+	$stmt->bindValue(':name', $nationalPark['name'], PDO::PARAM_STR);
+	$stmt->bindValue(':location', $nationalPark['location'], PDO::PARAM_STR);
+	$stmt->bindValue(':date_established', $nationalPark['date_established'], PDO::PARAM_STR);
+	$stmt->bindValue(':area_in_acres', $nationalPark['area_in_acres'], PDO::PARAM_INT);
+	$stmt->bindValue(':images', $nationalPark['images'], PDO::PARAM_STR);
 
-	  
+	// execute query after each statment
+	$stmt->execute();
+}
