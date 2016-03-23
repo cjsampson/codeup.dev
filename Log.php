@@ -1,29 +1,46 @@
 <?php
 
 class Log {
-	public $handle;
-	public $filename;
 
-	public function __construct($prefix = 'log') 
+	private $handle;
+	private $filename;
+
+	public function __construct() 
 	{
-		$this->filename = $prefix . date('Y-m-d h:i:s') . '.log';
+		$this->setFileName();
+		$this->setHandle();
+	}
+
+	private function setFilename($prefix = 'log') 
+	{
+		$this->filename = __DIR__ . '/public/logs/' . $prefix . date('Y-m-d') . '.log';
+		
+		if ( !is_string($this->filename)) {
+			echo 'The property $filename needs to be a string. You gave ' . gettype($filename) . PHP_EOL;
+			die();
+		}
+	}
+
+	private function setHandle() 
+	{
 		$this->handle = fopen($this->filename, 'a');
 	}
-	public function logMessage($level, $message) 
+
+	private function logMessage($level, $message) 
 	{
-	    $dateYmdhis = date('Y-m-d h:i:s');
+	    $time = date('Y-m-d H:i:s');
 	    $logLevel = '[' . $level . ']';
-	    $log = $dateYmdhis . ' ' . $logLevel . ' ' . $message;
+	    $log = $time . ' ' . $logLevel . ' ' . $message;
 	    fwrite($this->handle, PHP_EOL . $log);
 	}
 
-	public function info() 
+	public function info($message) 
 	{
-		$this->logMessage('INFO', 'This is an info message');
+		$this->logMessage('INFO', $message);
 	}
-	public function error() 
+	public function error($message) 
 	{
-		$this->logMessage('ERROR', 'This is an error message');
+		$this->logMessage('ERROR', $message);
 	}
 
 	public function __destruct() 
@@ -31,3 +48,5 @@ class Log {
 		fclose($this->handle);
 	}
 }
+
+
