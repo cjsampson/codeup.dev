@@ -2,26 +2,55 @@
 require '../config.php';
 require '../db_connect.php';
 require '../Input.php';
-require 'uploadFile.php';
+// require 'uploadFile.php';
 
 var_dump($_FILES);
 var_dump($_POST);
-echo $target_file;
+// echo $target_file;
 
-if(Input::has('name') && Input::get('name') != ''
-		&& Input::has('location') && Input::get('location') != ''
-		&& Input::has('date_established') && Input::get('date_established') != ''
-		&& Input::has('area_in_acres') && Input::get('area_in_acres') != ''
-		&& Input::has('description') && Input::get('description') != ''
-		&& Input::has('images') && Input::get('images') != '' ) 
-{
+$error = [];
 
-	$parkName = Input::getString('name');
-	$parkLocation = Input::getString('location');
-	$parkDate = Input::getDate('date_established');
-	$parkAreaAcres = Input::getNumber('area_in_acres');
-	$parkDescription = Input::getString('description');
-	$parkImage = Input::getString('images');
+if(!empty($_POST)) {
+
+	if(Input::has('name') && Input::get('name') != ''
+			&& Input::has('location') && Input::get('location') != ''
+			&& Input::has('date_established') && Input::get('date_established') != ''
+			&& Input::has('area_in_acres') && Input::get('area_in_acres') != ''
+			&& Input::has('description') && Input::get('description') != ''
+			&& Input::has('images') && Input::get('images') != '' )  
+	{	
+		try {
+			$parkName = Input::getString('name'); 
+		} catch(Exception $e) {
+			$error['Incorrect format ' . $e->getMessage()]; 
+		}
+		try {
+			$parkLocation = Input::getString('location'); 
+		} catch(Exception $e) {
+			$error['Incorrect Location format ' . $e->getMessage()];
+		}
+		try {
+			$parkDate = Input::getDate('date_established'); 
+		} catch(Exception $e) {
+			$error['Incorrect Date format ' . $e->getMessage()];
+		} 
+		try {
+			$parkAreaAcres = Input::getNumber('area_in_acres'); 
+		} catch(Exception $e) {
+			$error['Incorrect number format ' . $e->getMessage()];
+		}
+		try {
+			$parkDescription = Input::getString('description'); 
+		} catch(Exception $e) {
+			$error['Incorrect Park Description format ' . $e->getMessage()];
+		}
+		try {
+			$parkImage = Input::getString('images'); 
+		}
+		catch(Exception $e) {	
+			$error['Incorrect Image format ' . $e->getMessage()];
+		}
+		print_r($error);
 
 	$stmt = $dbc->prepare("INSERT INTO national_parks (name, location, date_established, area_in_acres, description, images)
 				  		   VALUES (:name, :location, :date_established, :area_in_acres, :description, :images)");
@@ -31,14 +60,14 @@ if(Input::has('name') && Input::get('name') != ''
 	$stmt->bindValue(':area_in_acres', $parkAreaAcres, PDO::PARAM_STR);
 	$stmt->bindValue(':description', $parkDescription, PDO::PARAM_STR);
 	$stmt->bindValue(':images', $parkImage, PDO::PARAM_STR);
-
 	$stmt->execute();
+	} // end If statment
 }
+
 
 $page = (Input::has('page')) ? Input::get('page') : 1;
 $limit = (Input::has('limit')) ? Input::get('limit') : 4;
 $offset = ($page - 1) * $limit;
-
 
 // Query to LIMIT results for view
 $stmt = $dbc->prepare("SELECT * FROM national_parks LIMIT :limit OFFSET :offset");
