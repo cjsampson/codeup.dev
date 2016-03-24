@@ -36,9 +36,13 @@ class Input
 
     public static function getString($key) {
         $value = self::get($key);
-        if($value == null || is_resource($value) || is_numeric($value) || is_object($value) ) {
+
+        if($value == null || is_resource($value) || is_numeric($value) || is_object($value) || is_numeric($value) ) {
             throw new exception('The value needs to be a string');
+        } else {
+            return $value;
         }
+
     }
 
     public static function getNumber($key) {
