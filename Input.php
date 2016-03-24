@@ -21,16 +21,44 @@ class Input
      * @return mixed value passed in request
      */
     public static function get($key, $default = null) {
+        return (self::has($key)) ? $_REQUEST[$key] : $default;
+        
         // TODO: Fill in this function
-        if(self::has($key)) {
-            return $_REQUEST[$key];
-        }
-        return null;
+        // if(self::has($key)) {
+        //     return $_REQUEST[$key];
+        // }
+        // return null;
     }
 
     public static function escape($key) {
         return htmlspecialchars(strip_tags($key));
     }
+
+    public static function getString($key) {
+        $value = self::get($key);
+        if($value == null || is_resource($value) || is_numeric($value) || is_object($value) ) {
+            throw new exception('The value needs to be a string');
+        }
+    }
+
+    public static function getNumber($key) {
+        $value = self::get($key);       
+        if(!is_numeric($value) || $value == null) {
+            throw new exception('The value is not a number or is null');
+        }
+        return (float)$value;
+    }
+
+    public static function getDate($key) {
+        $date = self::get($key);
+        $validDate = date_create($value);
+        if(!$validDate) {
+            throw new exception('Please enter valid date');
+        }
+        return $validDate;
+
+    }
+    
 
     ///////////////////////////////////////////////////////////////////////////
     //                      DO NOT EDIT ANYTHING BELOW!!                     //
