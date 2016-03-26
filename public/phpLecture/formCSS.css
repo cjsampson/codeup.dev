@@ -1,0 +1,103 @@
+html, body {
+  background-color: #27b896;
+}
+
+h2 {
+  font-family: Helvetica;
+  font-size: 2em;
+  text-align: center;
+  color: #2E4172;
+}
+
+h1 {
+text-align: center;
+}
+
+form {
+  background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 450px;
+  font-family: Helvetica, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+input {
+  margin-right: auto;
+  margin-left: auto;
+  width: 375px;
+  display: inline-block;
+  border: 1px solid #999;
+  height: 25px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+textarea#feedback {
+  margin-right: auto;
+  margin-left: auto;  
+  width: 75%;
+  height: 150px;
+  display: block;
+  margin-top: 10px;
+}
+
+button {
+  width: 100px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #09C;
+  color: #fff;
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 30px;
+  border-radius: 15px;
+  border: 1p solid #999;
+}
+
+#name, #email, #subject {
+  width: 75%;
+  margin-top: 25px;
+  display: block;
+
+}
+
+#inputButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  width: 75%;
+}
+
+#name::-webkit-input-placeholder {
+   text-align: center;
+}
+
+#email::-webkit-input-placeholder {
+   text-align: center;
+}
+#subject::-webkit-input-placeholder {
+   text-align: center;
+}
+
+textarea::-webkit-input-placeholder {
+  text-align: center;
+}
+
+
+#inputButton:hover {
+  background-color: #000;
+  color: #fff;
+}

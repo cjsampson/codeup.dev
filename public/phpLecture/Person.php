@@ -1,26 +1,41 @@
 <?php
 
 class Person {
-	public $firstName;
-	public $lastName;
+	protected $firstName;
+	protected $lastName;
 
 	public function __construct($firstName, $lastName)		
 	{
-		$this->firstName = $firstName;
-		$this->lastName = $lastName;
-		$this->getFullName();
+		$this->setFirstName($firstName);
+		$this->setLastName($lastName);
 	}
 
-	public function getFullName() 
+	protected function setFirstName($firstName) 
 	{
-		return $this->firstName . " " . $this->lastName;
+		$this->firstName = trim($firstName);
+	}
+
+	protected function setLastName($lastName) 
+	{
+		$this->lastName = trim($lastName);
+	}
+
+	protected function getFirstName($firstName) 
+	{
+		return $this->firstName;
+	}
+
+	protected function getLastName($lastName) 
+	{
+		return $this->lastName;
+	}
+
+	public function fullName() 
+	{
+		return $this->getFirstName . " " . $this->getLastName;
 	}
 }
 
-$cj = new Person('CJ', 'Sampson')
-echo $cj->firstName;
-echo $cj->getFullName();
-
-$ryan = new Person('Ryan', 'Orsinger');
-echo "Howdy, " . $ryan->getFullName();
+$person = new Person('John', 'Doe');
+echo $person->setFirstName('Jane');
 
