@@ -9,7 +9,6 @@ class Input
      * @return boolean whether value exists in $_POST or $_GET
      */
     public static function has($key) {
-        // TODO: Fill in this function
         return isset($_REQUEST[$key]);
     }
 
@@ -22,19 +21,45 @@ class Input
      */
     public static function get($key, $default = null) {
         return (self::has($key)) ? $_REQUEST[$key] : $default;
-        
-        // TODO: Fill in this function
-        // if(self::has($key)) {
-        //     return $_REQUEST[$key];
-        // }
-        // return null;
     }
+
+    // Check if the input value is empty and is there
+    public static function hasValue() {
+        if(isset($_REQUEST[$key]) && ($_REQUEST[$key]) != '')) {
+            return true;
+        }
+    }
+
 
     public static function escape($key) {
         return htmlspecialchars(strip_tags($key));
     }
 
-    public static function getString($key) {
+
+    public static function getString($key, $min = 1, $max = 500) 
+    {
+        $value = self::get($key);
+        if(!is_string($value)) {
+            throw new InvalidArgumentException('The input $value needs to be a string.');
+        }
+        if(!is_string($value)) {
+            throw new InvalidArgumentException('The input value $value is incorrect.');
+        }
+        if(!is_numeric($min) && $is_numeric($max)) {
+            throw new InvalidArgumentException('$min and $max must be numeric types.');
+        }
+        if($value > $max){ 
+            throw new LengthException('The input field must be less than $max.');
+        }
+        if($value < $min) {
+            throw new LengthException('The input field must be more than $min.');
+        }
+        
+
+
+
+        if()
+
         $value = self::get($key);
 
         if($value == null || is_resource($value) || is_numeric($value) || is_object($value) || is_numeric($value) ) {
@@ -45,7 +70,7 @@ class Input
 
     }
 
-    public static function getNumber($key) {
+    public static function getNumber($key, $min = 1, $max = ) {
         $value = self::get($key);       
         if(!is_numeric($value) || $value == null) {
             throw new exception('The value is not a number or is null');
@@ -55,7 +80,7 @@ class Input
 
     public static function getDate($key) {
         $date = self::get($key);
-        $validDate = date_create($value);
+        $validDate = date_create($date);
         if(!$validDate) {
             throw new exception('Please enter valid date');
         }
